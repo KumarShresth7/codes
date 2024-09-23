@@ -20,11 +20,9 @@ int main()
     bind(socket_fd, (struct sockaddr *)&serverAddress, sizeof(serverAddress));
     listen(socket_fd, 10);  
 
-    int client_fd;
-
     while (1)
     {
-        client_fd = accept(socket_fd,NULL, NULL);
+        int client_fd = accept(socket_fd,NULL, NULL);
         bzero(message, 100);
         recv(client_fd, message, 100, 0);
 
