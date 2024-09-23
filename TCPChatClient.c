@@ -13,7 +13,7 @@
         char message[message_SIZE];
 
         // Create TCP sock_fdet
-        int sock_fd = sock_fdet(AF_INET, SOCK_STREAM, 0);
+        int sock_fd = socket(AF_INET, SOCK_STREAM, 0);
 
         serv_addr.sin_family = AF_INET;
         serv_addr.sin_port = htons(PORT);
