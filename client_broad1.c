@@ -21,7 +21,7 @@ int main(int argc, const char *argv[])
     broadcastaddr.sin_family = AF_INET;
     broadcastaddr.sin_addr.s_addr = INADDR_ANY;   
     broadcastaddr.sin_port = htons(10000);
-
+    
     int optval = 1;
     setsockopt(sockfd, SOL_SOCKET, SO_BROADCAST, &optval, sizeof(int));
     
